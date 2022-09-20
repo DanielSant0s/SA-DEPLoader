@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "sifdev.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "elf.h": "c"
+    }
+}

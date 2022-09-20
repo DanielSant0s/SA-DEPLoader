@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mips64r5900el-ps2-elf-g++ -Wno-pointer-arith -fomit-frame-pointer -fno-exceptions \
+mips64r5900el-ps2-elf-gcc -Wno-pointer-arith -fomit-frame-pointer -fno-exceptions \
 -fno-asynchronous-unwind-tables -fno-unwind-tables -nostartfiles -nostdlib \
 -fno-builtin-memcmp -fno-builtin-memcpy -fno-builtin-memset \
 -fno-builtin-printf -fno-builtin-strcat -fno-builtin-strchr \
@@ -10,4 +10,4 @@ mips64r5900el-ps2-elf-g++ -Wno-pointer-arith -fomit-frame-pointer -fno-exception
 -fno-builtin-malloc -fno-builtin-free \
 -Wl,\
 --section-start=.text=0x529C40 \
- -T format.ld elfparser.cpp -o loader.elf 
+ -T format.ld stdlib.c stdio.c string.c sifdev.c elfparser.c -o loader.elf 
